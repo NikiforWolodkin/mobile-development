@@ -34,4 +34,32 @@
         android:layout_height="wrap_content"
         android:text="Next" />
 
+    <Button
+        android:id="@+id/openPhoneAppButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Open Phone App"
+        android:layout_centerInParent="true" />
+
+    <Button
+        android:id="@+id/openEmailAppButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Open Email App"
+        android:layout_centerInParent="true" />
+
+    <Button
+        android:id="@+id/openCameraAppButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Open Camera App"
+        android:layout_centerInParent="true" />
+
+    <Button
+        android:id="@+id/openYoutubeInBrowserButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Open YouTube in Browser"
+        android:layout_centerInParent="true" />
+
 </LinearLayout>
