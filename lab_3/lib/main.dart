@@ -133,20 +133,22 @@ class PostComponent extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
+          children: [
             Row(
-              children: <Widget>[
+              children: [
                 CircleAvatar(
                   backgroundImage: NetworkImage(authorImageUrl),
                 ),
                 const SizedBox(width: 8),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
+                  children: [
                     Text(authorName, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
                     Text(postLocation, style: const TextStyle(color: Colors.grey)),
                   ],
                 ),
+                Expanded(child: Container()),
+                const Icon(Icons.menu_open),
               ],
             ),
             const SizedBox(height: 8),
