@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
 
 class PostPage extends StatelessWidget {
-  const PostPage({Key? key}) : super(key: key);
+  final String author;
+  final String postLocation;
+  final String description;
+
+  const PostPage({
+    Key? key,
+    required this.author,
+    required this.postLocation,
+    required this.description,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -63,29 +72,29 @@ class PostPage extends StatelessWidget {
                   ),
                 ),
                 Expanded(child: Container()),
-                const Padding(
-                  padding: EdgeInsets.fromLTRB(24, 12, 24, 0),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(24, 12, 24, 0),
                   child: Row(
                     children: [
-                      CircleAvatar(
+                      const CircleAvatar(
                         backgroundImage: NetworkImage('https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_3x2.jpg?w=718&h=479'),
                       ),
-                      SizedBox(width: 8),
+                      const SizedBox(width: 8),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('Author', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                          Text('Post location'),
+                          Text(author, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                          Text(postLocation),
                         ],
                       ),
                     ],
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.fromLTRB(24, 12, 24, 0),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(24, 12, 24, 0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('Product description', style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold)),
+                    child: Text(description, style: const TextStyle(fontSize: 32, fontWeight: FontWeight.bold)),
                   ),
                 ),
                 const SafeArea(
@@ -102,6 +111,7 @@ class PostPage extends StatelessWidget {
     );
   }
 }
+
 
 class ShopControlsComponent extends StatelessWidget {
   const ShopControlsComponent({Key? key}) : super(key: key);
