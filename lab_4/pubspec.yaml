@@ -13,11 +13,17 @@ dependencies:
   sqflite: any
   path_provider: any
   shared_preferences: any
+  hive: any
+  hive_flutter: any
+  build_runner: any
+  permission_handler: any
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+
+  hive_generator: any 
 
 flutter:
   uses-material-design: true
