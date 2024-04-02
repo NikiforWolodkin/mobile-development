@@ -86,13 +86,17 @@ class PostComponent extends StatelessWidget {
                                 author: post.authorName,
                                 postLocation: post.postLocation,
                                 description: post.postDescription,
+                                authorImageUrl: post.authorImageUrl,
+                                postImageUrl: post.postImageUrl,
                               ),
                             ),
                           );
                         },
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8.0),
-                          child: Image.network(post.postImageUrl),
+                        child: Center(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(8.0),
+                            child: Image.network(post.postImageUrl),
+                          ),
                         ),
                       ),
                       const SizedBox(height: 8),
@@ -115,7 +119,6 @@ class PostComponent extends StatelessWidget {
                               Text('${post.commentCount}'),
                             ],
                           ),
-                          const Icon(Icons.bookmark_border),
                         ],
                       ),
                     ],

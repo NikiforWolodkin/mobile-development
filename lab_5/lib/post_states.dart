@@ -72,19 +72,49 @@ class PostBloc extends Bloc<PostEvent, PostState> {
 
 
 
-
 Future<Post> fetchPost() async {
   // Simulate network delay
   await Future.delayed(Duration(milliseconds: 400 + Random().nextInt(2500)));
 
   // Generate random data
-  final authorName = 'Author ${Random().nextInt(100)}';
-  final postLocation = 'Location ${Random().nextInt(100)}';
-  final postDescription = 'Description ${Random().nextInt(100)}';
-  const postImageUrl = 'https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_3x2.jpg?w=718&h=479';
-  const authorImageUrl = 'https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_3x2.jpg?w=718&h=479';
-  final likeCount = Random().nextInt(50000);
-  final commentCount = Random().nextInt(5000);
+  final authorNames = [
+    'Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank', 'Grace', 'Hannah', 'Isaac', 'Julia'
+  ];
+  final postLocations = [
+    'New York', 'Los Angeles', 'London', 'Tokyo', 'Paris', 'Sydney', 'Berlin', 'Toronto', 'Seoul', 'Mumbai'
+  ];
+  final postDescriptions = [
+    'Exploring the wilderness', 'Capturing city lights', 'Adventures in nature', 'Foodie delights', 'Urban street art'
+  ];
+  final imageUrls = [
+    'https://queticosuperior.org/wp-content/uploads/2023/12/TNWR-Lynx-Project-2020.jpg',
+    'https://senecaparkzoo.org/wp-content/uploads/2022/07/Lynx_Seneca-Park-Zoo-Programs-04-18-2022-By-Sean-Maciejewski-5-of-12-scaled.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Cat_August_2010-4.jpg/1200px-Cat_August_2010-4.jpg',
+    'https://static.scientificamerican.com/sciam/cache/file/2AE14CDD-1265-470C-9B15F49024186C10_source.jpg?w=1200',
+    'https://www.wfla.com/wp-content/uploads/sites/71/2023/05/GettyImages-1389862392.jpg?w=2560&h=1440&crop=1',
+    'https://hips.hearstapps.com/hmg-prod/images/cat-instagram-captions-64ff2dfa47e9a.jpg?crop=1xw:0.84375xh;center,top',
+    'https://www.pdinsurance.co.nz/wp-content/uploads/2023/02/Where-do-Pallas-cats-live-02-nz.jpg',
+    'https://external-preview.redd.it/bK_8MUe7k7fYKkV6dNOlT0uF8t87tTjGjD9hyN4rFaQ.jpg?auto=webp&s=ad03101063adf9eb45fc9090eb57945306a4708b',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjlbgXd58xu4KIcp-ZIm762ctT0Ps3DDNrnZ1CREMZYMTsmN0iFUNzUig-vvj9L9h64s8&usqp=CAU',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/640px-Cat_November_2010-1a.jpg',
+    'https://cdn.theatlantic.com/media/img/photo/2015/03/aoshima-japans-cat-island/c01_RTR4RUGT-1/original.jpg',
+    'https://www.catster.com/wp-content/uploads/2023/11/Cat-in-Japan-Pabkov-Shutterstock.jpg',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp57S_X0Yb2sXnPSFNmiT4QfLpj5gKFAuyIk2_rBhrqw&s',
+    'https://web-japan.org/nipponia/nipponia26/images/animal/25_1.jpg',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsjR1MkdsF89WrLj8FOoyWt0xDKzm-Ghau_36hOhJQkg&s',
+    'https://preview.redd.it/4v3kmhe9re061.jpg?width=1080&crop=smart&auto=webp&s=ca1c21cc6038cae64b4cf6a8a3392eda8eb4bf24',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbSSxbv14WnPuA7LjeDH4V-4LMxp332RKRlj1nQ5k_Bg&s',
+  ];
+
+  // Randomly select values from the dictionaries
+  final random = Random();
+  final authorName = authorNames[random.nextInt(authorNames.length)];
+  final postLocation = postLocations[random.nextInt(postLocations.length)];
+  final postDescription = postDescriptions[random.nextInt(postDescriptions.length)];
+  final postImageUrl = imageUrls[random.nextInt(imageUrls.length)];
+  final authorImageUrl = imageUrls[random.nextInt(imageUrls.length)];
+  final likeCount = random.nextInt(50000);
+  final commentCount = random.nextInt(5000);
 
   // Return a new Post
   return Post(

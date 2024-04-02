@@ -4,12 +4,16 @@ class PostPage extends StatelessWidget {
   final String author;
   final String postLocation;
   final String description;
+  final String authorImageUrl;
+  final String postImageUrl;
 
   const PostPage({
     Key? key,
     required this.author,
     required this.postLocation,
     required this.description,
+    required this.authorImageUrl,
+    required this.postImageUrl
   }) : super(key: key);
 
   @override
@@ -17,8 +21,8 @@ class PostPage extends StatelessWidget {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          image: const DecorationImage(
-            image: NetworkImage('https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_3x2.jpg?w=718&h=479'),
+          image: DecorationImage(
+            image: NetworkImage(postImageUrl),
             fit: BoxFit.cover,
           ),
           gradient: LinearGradient(
@@ -76,8 +80,8 @@ class PostPage extends StatelessWidget {
                   padding: const EdgeInsets.fromLTRB(24, 12, 24, 0),
                   child: Row(
                     children: [
-                      const CircleAvatar(
-                        backgroundImage: NetworkImage('https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_3x2.jpg?w=718&h=479'),
+                      CircleAvatar(
+                        backgroundImage: NetworkImage(authorImageUrl),
                       ),
                       const SizedBox(width: 8),
                       Column(
