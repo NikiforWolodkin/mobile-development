@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import 'clothing.dart';
+import 'package:lab_6/models/clothing.dart';
 
 class ClothingService {
   final CollectionReference clothingCollection =

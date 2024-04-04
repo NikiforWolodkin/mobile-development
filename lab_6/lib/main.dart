@@ -2,11 +2,11 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:lab_6/home_page.dart';
 
-import 'auth_service.dart';
-import 'login_page.dart';
-import 'register_page.dart';
+import 'package:lab_6/services/auth_service.dart';
+import 'package:lab_6/pages/login_page.dart';
+import 'package:lab_6/pages/register_page.dart';
+import 'package:lab_6/pages/home_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

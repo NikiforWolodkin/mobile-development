@@ -8,4 +8,8 @@
 
 **lab_5 => lab 9**
 
+**lab_6 => lab 10 + 11**
+
 don't ask why ok
+
+add your own google-services.json for lab_6

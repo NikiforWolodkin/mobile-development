@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:lab_6/clothing_page.dart';
 
-import 'auth_service.dart';
+import 'package:lab_6/pages/clothing_page.dart';
+import 'package:lab_6/services/auth_service.dart';
 
 class HomePage extends StatelessWidget {
   final AuthService authService;

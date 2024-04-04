@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'clothing.dart';
-import 'clothing_service.dart';
+
+import 'package:lab_6/models/clothing.dart';
+import 'package:lab_6/services/clothing_service.dart';
 
 class ClothingPage extends StatefulWidget {
   @override

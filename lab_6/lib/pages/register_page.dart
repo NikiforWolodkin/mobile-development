@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-import 'auth_service.dart';
+import 'package:lab_6/services/auth_service.dart';
 
 class RegistrationPage extends StatelessWidget {
   final AuthService authService;
